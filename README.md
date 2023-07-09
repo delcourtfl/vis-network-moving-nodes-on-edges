@@ -10,7 +10,7 @@ You can try the example [here](https://delcourtfl.github.io/vis-network-moving-n
 
 ## Features
 
-- SmpleMoveOnEdgeEngine : forward flow
+- SimpleMoveOnEdgeEngine : forward flow
 - CompleteMoveOnEdgeEngine : forward and backward flow + event timing
 
 ## Custom Installation
