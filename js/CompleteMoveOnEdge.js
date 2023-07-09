@@ -80,7 +80,7 @@ class CompleteNodeOnEdgeEngine {
                 if (this.ratio_inc >= 0) {
                     var entry = this.del_log_table[time];
                     if (entry === undefined) {
-                        this.del_log_table[time] = [[node.id, node.source, node.target]];
+                        this.del_log_table[time] = [[node, node.source, node.target]];
                     } else {
                         entry.push([node.id, node.source, node.target]);
                     }
