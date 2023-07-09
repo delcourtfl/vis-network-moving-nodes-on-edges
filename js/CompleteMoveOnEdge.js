@@ -142,7 +142,7 @@ class CompleteNodeOnEdgeEngine {
         if (isReplay) {
             if (this.del_log_table[time] !== undefined) {
                 this.del_log_table[time].forEach((event) => {
-                    this.traces_table[event[0]].pop();
+                    this.traces_table[event[0].id].pop();
                     this.createDotNode(event[0], event[1], event[2], 100, time);
                 });
                 delete this.del_log_table[time];
@@ -150,7 +150,7 @@ class CompleteNodeOnEdgeEngine {
         } else {
             if (this.add_log_table[time] !== undefined) {
                 this.add_log_table[time].forEach((event) => {
-                    this.traces_table[event[0]].pop();
+                    this.traces_table[event[0].id].pop();
                     this.createDotNode(event[0], event[1], event[2], 0, time);
                 });
                 delete this.add_log_table[time];
