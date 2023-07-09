@@ -93,6 +93,7 @@ You can try the example [here](https://delcourtfl.github.io/vis-network-moving-n
 
 [MIT License](LICENSE)
 
-## Acknowledgements
+## Resources
 
 - Open issue of the old vis repository (https://github.com/almende/vis/issues/507)
+- Old example of chap-links-library (http://almende.github.io/chap-links-library/js/network/examples/example02_shapes.html)
