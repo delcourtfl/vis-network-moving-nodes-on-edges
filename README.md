@@ -2,7 +2,7 @@
 
 ![Game Screenshot](screenshot.gif)
 
-This repository enables the creation of nodes moving along the edges of a network created with the Vis Network library.
+This repository enables node moving animation along the edges of a network created with the Vis Network library.
 
 ## Demo
 
