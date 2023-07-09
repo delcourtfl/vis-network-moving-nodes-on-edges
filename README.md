@@ -1,4 +1,4 @@
-# 421 Dice Game App
+# Vis-Network Moving Nodes Along The Edges
 
 ![Game Screenshot](screenshot.gif)
 
@@ -21,7 +21,7 @@ You can try the example [here](https://delcourtfl.github.io/vis-network-moving-n
 
 ## Usage
 
-```
+```javascript
     // network nodes
     var nodes = new vis.DataSet([
         {id: 1, label: 'Node 1'},
