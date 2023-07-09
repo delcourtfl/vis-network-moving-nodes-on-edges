@@ -2,7 +2,7 @@
 
 ![Game Screenshot](screenshot.gif)
 
-This repository enables the addition of moving nodes on the edges of a network created with Vis Network.
+This repository enables the creation of nodes moving along the edges of a network created with the Vis Network library.
 
 ## Demo
 
