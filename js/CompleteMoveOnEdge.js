@@ -82,14 +82,14 @@ class CompleteNodeOnEdgeEngine {
                     if (entry === undefined) {
                         this.del_log_table[time] = [[node, node.source, node.target]];
                     } else {
-                        entry.push([node.id, node.source, node.target]);
+                        entry.push([node, node.source, node.target]);
                     }
                 } else {
                     var entry = this.add_log_table[time];
                     if (entry === undefined) {
-                        this.add_log_table[time] = [[node.id, node.source, node.target]];
+                        this.add_log_table[time] = [[node, node.source, node.target]];
                     } else {
-                        entry.push([node.id, node.source, node.target]);
+                        entry.push([node, node.source, node.target]);
                     }
                 }
             });
