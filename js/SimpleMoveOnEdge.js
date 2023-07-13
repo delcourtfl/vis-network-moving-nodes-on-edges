@@ -1,6 +1,14 @@
 class SimpleNodeOnEdgeEngine {
     constructor(network, nodes, dotNodes, edges, forwTable) {
         this.network = network;
+
+        // Overwrite the moveNodes() method for physics engine
+        const originalFunction = this.network.physics.moveNodes;
+        this.network.physics.moveNodes = function() {
+            originalFunction.call(this);
+            this.body.emitter.emit("physicsMoving");
+        };
+
         this.nodes = nodes;
         this.edges = edges;
         this.dotNodes = dotNodes;
@@ -42,6 +50,13 @@ class SimpleNodeOnEdgeEngine {
             });
         });
 
+        this.network.on('physicsMoving', (params) => {
+            this.edgesMoved = true;
+            this.edges.forEach((edge) => {
+                edge.pointsArr = {};
+            });
+        });
+
         this.network.on('click', (properties) => {
             var ids = properties.nodes;
             if (ids.length > 0) {
@@ -62,7 +77,6 @@ class SimpleNodeOnEdgeEngine {
             properties.items.forEach((nodeId) => {
                 var node = this.dotNodes.get(nodeId);
                 this.nodes.add(node);
-                console.log(this.nodes);
             });
         });
         

@@ -1,6 +1,14 @@
 class CompleteNodeOnEdgeEngine {
     constructor(network, nodes, dotNodes, edges, forwTable) {
         this.network = network;
+
+        // Overwrite the moveNodes() method for physics engine
+        const originalFunction = this.network.physics.moveNodes;
+        this.network.physics.moveNodes = function() {
+            originalFunction.call(this);
+            this.body.emitter.emit("physicsMoving");
+        };
+
         this.nodes = nodes;
         this.edges = edges;
         this.dotNodes = dotNodes;
@@ -43,6 +51,13 @@ class CompleteNodeOnEdgeEngine {
             this.edgesMoved = true;
             params.edges.forEach((edgeId) => {
                 this.edges.get(edgeId).pointsArr = {};
+            });
+        });
+
+        this.network.on('physicsMoving', (params) => {
+            this.edgesMoved = true;
+            this.edges.forEach((edge) => {
+                edge.pointsArr = {};
             });
         });
 
