@@ -1,6 +1,6 @@
 # Vis-Network Moving Nodes Along The Edges
 
-![Game Screenshot](screenshot.gif)
+![Screenshot1](screenshot.gif)
 
 This repository enables node moving animation along the edges of a network created with the Vis Network library.
 
@@ -12,6 +12,10 @@ You can try the example [here](https://delcourtfl.github.io/vis-network-moving-n
 
 - SimpleMoveOnEdgeEngine : forward flow
 - CompleteMoveOnEdgeEngine : forward and backward flow + event timing
+- Works with physics enabled (thanks to some custom event)
+- Customizable moving nodes
+
+![Screenshot2](screenshotPhysics.gif)
 
 ## Custom Installation
 
