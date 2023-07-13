@@ -23,6 +23,8 @@ You can try the example [here](https://delcourtfl.github.io/vis-network-moving-n
 2. Launch `python server.py` to create a small http server.
 3. Open `http://localhost:8000/` in your preferred web browser (no online dependencies).
 
+(Or just copy one of the two .js file in your project and load it)
+
 ## Usage
 
 ```javascript
